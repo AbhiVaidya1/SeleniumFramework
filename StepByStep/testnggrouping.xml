@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="TestGroups">
+
+		<groups>
+		
+		<!--<define name="Regression1">
+		<include name="regression"></include> using define gives meta grouping we have to use Regression1 in <run <include"name" 
+		<include name="smoke"></include>
+		</define>-->
+		
+			<run>
+				<include name="sanity"></include>
+				<exclude name="regression"></exclude> <!--excludes the tests in the regression groups -->
+				<!--<include name="windows.*"></include> --><!--Using regular exp we can include tests -->
+				<!--<include name="AllClassTests"></include>--><!--We can group at class level also -->
+			</run>
+				
+		</groups>
+
+		<classes>
+			<class name="testNGPriorityMulBrowsernGrouping.TestNGGroups" />
+		</classes>
+	</test> <!--
+	TestGroups -->
+</suite> <!--
+Suite -->

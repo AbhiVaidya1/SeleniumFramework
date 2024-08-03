@@ -1,0 +1,76 @@
+TestNG Listeners
+1. Listeners are components in TestNG that listens(keep a track) to test execution and helps perform actions multiple stages of test execution 
+2. Ex: OnStart, OnFinish, OnSuccess, OnFailure, Etc..
+3. Listeners are interfaces in TestNG library
+
+TestNG grouping
+1. We can run the tests in different groups like, Test1 Test2 as Sanity, Test2 Test3 as Smoke, Test3,4,5 as Regression1 and all tests as Regression test suite
+
+
+Rerun(Retry) failed tests, why to retry
+1. 100 automated test
+2. 6 hrs to run
+10 pm ---- server is down, network slow, application slow
+
+at 4 am or 9 am the tests are rerun
+
+Recording
+1. Recording can be seen as a helping hand while creating your Selenium
+Automation Scripts
+2. You can use recorded scripts to get object locators and actions and use
+them the way you need in your framework
+
+Waits:
+1. The elements load time on a web page can vary
+2. Not all the elements are loaded at the same time
+3. In applications developed using Ajax, Javascript etc, objects on web page
+may load at different time
+4. To handle this, we need to use waits in Selenium
+5. With the help of waits, we can enable the script to wait for sometime before
+throwing No Such Element exception
+
+Headless Browsers can be used for :
+1. Running your test on a headless systems like linux os without gui.
+2. When you want simulate multiple browser behaviour on a single
+machine.
+3. To use minimal resources (because there is no GUI)
+4. Need to run your test just for data creation
+Headless Browsers should not/cannot be used:
+1. If you need to visually observe your test on the browser
+2. It does not give you exact feedback of what your customers will actually
+experience on your website (Page loading speeds ...etc)
+3. Headless Browsers sometimes may throw errors that is not observed
+on real browsers
+
+You can use actual browsers on a headless machine
+1. Real browsers can run in headless manner on systems with Linux with zero
+configurations. Cl systems like Jenkins can be used.
+2. HtmlUnit browser can be run with Web Driver and not with Selenium RC.
+3. Selenium RC cannot support headless HtmlUnit browser.
+
+Read about Xvfb - X virtual frame buffer
+1. It is a display server that performs all graphical operations in memory without showing anything
+on the screen.
+2. Therefore it does not require the system to have a screen or gui.
+https://en.wikipedia.org/wiki/Xvfb
+https://wiki.jenkins-ci.org/display/JENKlNS/Xvfb+Plugin
+
+**How to use Headless Chrome
+ChromeOptions options = new ChromeOptions();
+options.addArguments("headless");
+
+
+What is AutolT
+1. A software designed for automating windows GUI
+2. Uses a combination of simulated keystrokes, mouse movement and
+window/control manipulation to automate tasks not possible using only
+selenium
+3. An Autolt automation script can be converted into a compressed,
+stand-alone executable
+4. AutolT is Free, Works on Windows
+Why to use AutolT
+1. Selenium cannot handle any non-browser / non-HTML elements
+To handle such elements like:
+1. Windows authentication box
+2. File upload dialog box
+3. Any other non-browser interaction
