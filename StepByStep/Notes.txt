@@ -74,3 +74,14 @@ To handle such elements like:
 1. Windows authentication box
 2. File upload dialog box
 3. Any other non-browser interaction
+
+What is Visual Validation
+1. Activity to validate the Ul appears correctly to the user
+2. Visual validation includes testing Ul components for their
+Location
+Size I Shape
+Color
+Pixel
+Resolution
+Fonts I Layouts I Charts
+etc...
